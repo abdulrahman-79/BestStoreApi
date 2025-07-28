@@ -87,7 +87,7 @@ namespace BestStoreApi.Controllers
             var subject = _context.Subjects.Find(contactDto.SubjectId);
             if(subject is null)
             {
-                ModelState.AddModelError("Subject", "Pkease select a valid subject");
+                ModelState.AddModelError("Subject", "Please select a valid subject");
                 return BadRequest(ModelState);
             }
 
