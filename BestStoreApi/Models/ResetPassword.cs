@@ -1,0 +1,16 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace BestStoreApi.Models
+{
+    [Index("Email", IsUnique = true)]
+    public class ResetPassword
+    {
+        public int id { get; set; }
+        [MaxLength(100)]
+        public string Email { get; set; } = "";
+        [MaxLength(100)]
+        public string Token { get; set; } = "";
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+    }
+}
